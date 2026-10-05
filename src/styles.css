@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Only the glyphs of the hero's Sanskrit invocation (see scripts/subset-invocation-font.mjs) */
+@font-face {
+  font-family: "Invocation";
+  src: url("./assets/fonts/invocation.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* ───────────────────────── Design tokens ───────────────────────── */
+@theme {
+  /* Brand palette */
+  --color-wine: #7d133a; /* Pansy Purple — names, seal, primary action */
+  --color-wine-deep: #5c0d2a;
+  --color-ocher: #d6b43e; /* Olive Ocher — fine gold linework */
+  --color-olympic: #5a82b3; /* Olympic Blue — travel accents */
+  --color-olympic-ink: #3f6593; /* Olympic Blue, darkened for small text (AA) */
+
+  /* Paper & ink */
+  --color-ivory: #f7f1e8;
+  --color-cream: #faf5ee;
+  --color-sand: #efe4d3;
+  --color-gold: #b08a3e; /* Antique Gold — ornaments, rules */
+  --color-gold-ink: #85652a; /* Antique Gold, darkened for small text (AA) */
+  --color-charcoal: #2e2e2e;
+  --color-muted: #6b635a;
+  --color-hairline: #e3d6c1;
+
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-sans: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-deva: "Invocation", "Noto Serif Devanagari", "Nirmala UI", serif;
+}
+
+/* ───────────────────────── Base ───────────────────────── */
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-ocher) 38%, transparent);
+    color: var(--color-charcoal);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-wine);
+    outline-offset: 3px;
+  }
+
+  img {
+    -webkit-user-drag: none;
+  }
+}
+
+/* ───────────────────────── Utilities ───────────────────────── */
+
+/* Fine paper grain, tiled. Sits on top of whatever background colour the element has. */
+@utility paper {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.31 0 0 0 0 0.17 0 0 0 0.16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+}
+
+/* Small letter-spaced label that sits above headings */
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-gold-ink);
+}
+
+/* Display headings; <em> inside picks up the italic wine accent */
+@utility heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-charcoal);
+  text-wrap: balance;
+
+  & em {
+    font-style: italic;
+    color: var(--color-wine);
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Thin-bordered stationery button */
+@utility btn-line {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border: 1px solid color-mix(in oklab, var(--color-gold-ink) 55%, transparent);
+  border-radius: 2px;
+  padding-inline: 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+
+  &:hover {
+    background-color: var(--color-wine);
+    border-color: var(--color-wine);
+    color: var(--color-cream);
+  }
+}

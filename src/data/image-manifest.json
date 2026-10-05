@@ -1,0 +1,27 @@
+{
+  "couple-embrace": {
+    "width": 736,
+    "height": 981,
+    "placeholder": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQBACdASoQABUAPu1kqk4ppaQiMAgBMB2JQBOmUABsMQTJMd0LuhJ3wAD+7FHk0kHiSVdszqLTHaFxK4L4ZEGh5CF3B05r4oabQDZ4vOrgWYFfqgAAAA=="
+  },
+  "couple-garland": {
+    "width": 736,
+    "height": 920,
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoQABQAPu1oqk6ppiQiMAgBMB2JaACsAB59XNggn0XZQsAA/rs8luOVr1KDwyDm24atdKrVGXWLtxCr2x+qWq7DieSQsNNpF6ygNaki9P3qNc0yGxOk5LMAAAA="
+  },
+  "couple-laughter": {
+    "width": 562,
+    "height": 882,
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACQAwCdASoQABkALrV2u12jqampiYC0S0AE6Xx0Ek7Bu1bNS21AAP0fmZCZ5bAaDrWBxTBlBsEn5HrwgReuYEBTOqAeS8uaGVvE/R+DSvQkVrBW5/b+QVOSkYAAAA=="
+  },
+  "couple-stage": {
+    "width": 736,
+    "height": 1104,
+    "placeholder": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQBACdASoQABgAPu1kqU2ppaQiMAgBMB2JZgCdMoADTQkHl/t0fAgBsAD2Pucwce4Ida2DzYeJokQpWLqz1kfEyHNHj+VBb/pDSvSNz1RW2KYCWxfB/jNJ8qS9t/vbgAA="
+  },
+  "invitation-arch": {
+    "width": 736,
+    "height": 1104,
+    "placeholder": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABwBACdASoQABgAPu1orU6ppiSiMAgBMB2JYgCdMoR3ACx2bOqakYQpytbgAgD41SLknCRvnd52HY14PA5hMMWLvci209FL4Ie5fLElu9KcX+Mo2KTbD/G4EQAAAA=="
+  }
+}
