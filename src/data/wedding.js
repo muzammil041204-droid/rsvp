@@ -218,6 +218,6 @@ export const nearby = [
 
 export const studio = {
   name: "ISOFORM",
-  url: "https://isoform.studio",
+  url: "https://www.isoform.in",
   cta: "Celebrate your story with ISOFORM",
 };
